@@ -6,8 +6,13 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SelectOptionPage extends PageObject {
 
-    public static void selectFromDropdownList(WebElementFacade element, String option){
+    public static void selectFromDropdownListByValue(WebElementFacade element, String value){
         Select question = new Select(element);
-        question.selectByValue(option);
+        question.selectByValue(value);
+    }
+
+    public static void selectFromDropdownListByIndex(WebElementFacade element, Integer index){
+        Select question = new Select(element);
+        question.selectByIndex(index);
     }
 }

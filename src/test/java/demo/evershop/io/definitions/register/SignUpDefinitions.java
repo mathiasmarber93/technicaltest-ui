@@ -17,7 +17,7 @@ public class SignUpDefinitions{
         signUp.open();
     }
 
-    @When("customer register an account")
+    @When("registers an account")
     public void customerRegisterAnAccount(){
         signUp.clickOnSignIn();
         signUp.clickOnCreateAccount();

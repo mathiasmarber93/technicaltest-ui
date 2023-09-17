@@ -18,7 +18,7 @@ public class ValidationPage extends PageObject {
     @FindBy(xpath = "//div[text()='Billing Address']//following-sibling::div")
     protected WebElementFacade billingAddress;
 
-    @FindBy(xpath = "//span[text()='Sub total']//following-sibling::div//child::div[text()='3 items']")
+    @FindBy(xpath = "//span[text()='Sub total']//following-sibling::div/div[1]")
     protected WebElementFacade items;
 
 }

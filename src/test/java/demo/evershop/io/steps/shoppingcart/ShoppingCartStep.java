@@ -2,62 +2,18 @@ package demo.evershop.io.steps.shoppingcart;
 
 import com.github.javafaker.Faker;
 import demo.evershop.io.pages.shoppingcart.ShoppingCartPage;
-import demo.evershop.io.utils.SelectOptionPage;
 import net.serenitybdd.annotations.Step;
-import net.serenitybdd.core.pages.WebElementFacade;
 
-
-import java.util.Random;
 
 import static demo.evershop.io.utils.Action.click;
 import static demo.evershop.io.utils.GenerateRandomNumber.generateRandomNumber;
-import static demo.evershop.io.utils.SelectOptionPage.selectFromDropdownList;
+import static demo.evershop.io.utils.SelectOptionPage.selectFromDropdownListByIndex;
+import static demo.evershop.io.utils.SelectOptionPage.selectFromDropdownListByValue;
 import static demo.evershop.io.utils.Waits.*;
 
 public class ShoppingCartStep extends ShoppingCartPage {
 
     Faker faker = new Faker();
-
-    @Step("Click on men")
-    public void clickOnMen(){
-        click(getDriver(), menLink);
-    }
-
-    @Step("Select products")
-    public void selectProducts(){
-        if (products.size() >= 3) {
-            for(int i=1; i<=3; i++){
-                try {
-                    String randomNumber = String.valueOf(generateRandomNumber());
-
-                    waitForElementClickable(getDriver(), products.get(i));
-                    products.get(i).click();
-
-                    waitForElementClickable(getDriver(), quantity);
-                    quantity.sendKeys(randomNumber);
-
-                    waitForElementClickable(getDriver(), sizeProductOptions);
-                    sizeProductOptions.click();
-
-                    Thread.sleep(100);
-                    waitForElementClickable(getDriver(), colorProductOptions);
-                    colorProductOptions.click();
-                    Thread.sleep(100);
-                    waitForElementClickable(getDriver(), addToCartButton);
-                    addToCartButton.click();
-
-                    productAddedMessageIsDisplayed(getDriver(), productMessage);
-
-                    waitForElementClickable(getDriver(), menLink);
-                    click(getDriver(), menLink);
-
-                } catch (Exception e) {
-                    System.err.println(e.getMessage());
-                }
-
-            }
-        }
-    }
 
     @Step("Click on shopping cart")
     public void clickOnShoppingCart(){
@@ -95,12 +51,13 @@ public class ShoppingCartStep extends ShoppingCartPage {
 
     @Step("Select country")
     public void selectCountry(){
-        selectFromDropdownList(countryDropdown, "US");
+        selectFromDropdownListByValue(countryDropdown, "US");
     }
 
     @Step("Select province")
     public void selectProvince(){
-        selectFromDropdownList(provinceDropdown, "US-NY");
+        int index = generateRandomNumber(1, provinceDropdown.size());
+        selectFromDropdownListByIndex(provinceOption, index);
     }
 
     @Step("Type post code")
@@ -111,8 +68,9 @@ public class ShoppingCartStep extends ShoppingCartPage {
 
     @Step("Click on shipping method")
     public void clickOnShippingMethod(){
-        waitForElementClickable(getDriver(), shippingMethodRdbtn);
-        shippingMethodRdbtn.click();
+        int randomShippingMethod = generateRandomNumber(0, shippingMethodRadioButtons.size()-1);
+        waitForElementClickable(getDriver(), shippingMethodRadioButtons.get(1));
+        shippingMethodRadioButtons.get(randomShippingMethod).click();
     }
 
     @Step("Click on continue shipping")

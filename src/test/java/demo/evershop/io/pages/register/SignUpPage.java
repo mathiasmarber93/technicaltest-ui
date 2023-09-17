@@ -22,7 +22,7 @@ public class SignUpPage extends PageObject {
     @FindBy(name = "password")
     protected WebElement passwordInput;
 
-    @FindBy(xpath = "//span[text()='SIGN UP']//ancestor::button")
+    @FindBy(xpath = "//span[text()='SIGN UP']")
     protected WebElementFacade signUpButton;
 
 }
