@@ -3,6 +3,7 @@ package demo.evershop.io.steps.shoppingcart;
 import com.github.javafaker.Faker;
 import demo.evershop.io.pages.shoppingcart.ShoppingCartPage;
 import net.serenitybdd.annotations.Step;
+import net.serenitybdd.core.pages.WebElementFacade;
 
 
 import static demo.evershop.io.utils.Action.click;
@@ -68,8 +69,8 @@ public class ShoppingCartStep extends ShoppingCartPage {
 
     @Step("Click on shipping method")
     public void clickOnShippingMethod(){
-        int randomShippingMethod = generateRandomNumber(0, shippingMethodRadioButtons.size()-1);
         waitForElementClickable(getDriver(), shippingMethodRadioButtons.get(1));
+        int randomShippingMethod = generateRandomNumber(0, shippingMethodRadioButtons.size()-1);
         shippingMethodRadioButtons.get(randomShippingMethod).click();
     }
 

@@ -26,10 +26,16 @@ public class SignUpStep extends SignUpPage {
         fullNameInput.sendKeys(fullName);
     }
 
+    private static String email;
+
     @Step("Type email")
     public void typeEmail(){
-        String email = faker.bothify("????##@gmail.com");
+        email = faker.bothify("????##@gmail.com");
         emailInput.sendKeys(email);
+    }
+
+    public static String getEmail() {
+        return email;
     }
 
     @Step("Type password")

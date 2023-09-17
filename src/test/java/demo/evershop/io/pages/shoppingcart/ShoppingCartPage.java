@@ -8,27 +8,6 @@ import java.util.List;
 
 public class ShoppingCartPage extends PageObject {
 
-    @FindBy(xpath = "//a[text()='Men']")
-    protected WebElementFacade menLink;
-
-    @FindBy(className = "listing-tem")
-    protected List<WebElementFacade> products;
-
-    @FindBy(name = "qty")
-    protected  WebElementFacade quantity;
-
-    @FindBy(xpath = "//span[text()='ADD TO CART']")
-    protected WebElementFacade addToCartButton;
-
-    @FindBy(xpath = "(//ul[contains(@class,'variant-option-list')])[1]/li")
-    protected List<WebElementFacade> sizeProductOptions;
-
-    @FindBy(xpath = "(//ul[contains(@class,'variant-option-list')])[2]/li")
-    protected List<WebElementFacade> colorProductOptions;
-
-    @FindBy(xpath = "//div[text()='JUST ADDED TO YOUR CART']")
-    protected WebElementFacade productMessage;
-
     @FindBy(xpath = "//a[@href='/cart']")
     protected  WebElementFacade shoppingCartIcon;
 
@@ -59,7 +38,7 @@ public class ShoppingCartPage extends PageObject {
     @FindBy(name = "address[postcode]")
     protected WebElementFacade postCodeInput;
 
-    @FindBy(xpath = "//label[contains(@for,'method')]//span[1]")
+    @FindBy(xpath = "//*[contains(text(),'Delivery -')]")
     protected List<WebElementFacade> shippingMethodRadioButtons;
 
     @FindBy(xpath = "//span[text()='Continue to payment']")

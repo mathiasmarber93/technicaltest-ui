@@ -1,6 +1,6 @@
 package demo.evershop.io.steps.shoppingcart;
 
-import demo.evershop.io.pages.shoppingcart.ShoppingCartPage;
+import demo.evershop.io.pages.shoppingcart.SelectProductPage;
 import net.serenitybdd.annotations.Step;
 
 import static demo.evershop.io.utils.Action.click;
@@ -8,10 +8,11 @@ import static demo.evershop.io.utils.GenerateRandomNumber.generateRandomNumber;
 import static demo.evershop.io.utils.Waits.productAddedMessageIsDisplayed;
 import static demo.evershop.io.utils.Waits.waitForElementClickable;
 
-public class SelectProductStep extends ShoppingCartPage {
+public class SelectProductStep extends SelectProductPage {
 
     @Step("Click on men")
-    public void clickOnMen(){
+    public void clickOnMen() {
+        waitForElementClickable(getDriver(), menLink);
         click(getDriver(), menLink);
     }
 
@@ -42,8 +43,7 @@ public class SelectProductStep extends ShoppingCartPage {
 
             productAddedMessageIsDisplayed(getDriver(), productMessage);
 
-            waitForElementClickable(getDriver(), menLink);
-            click(getDriver(), menLink);
+            clickOnMen();
         }
     }
 

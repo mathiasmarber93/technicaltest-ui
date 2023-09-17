@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "demo.evershop.io.definitions",
-        tags = "@Test"
+        tags = "@UI"
 )
 public class Runner {
 }

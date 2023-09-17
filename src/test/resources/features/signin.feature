@@ -1,4 +1,4 @@
-@Test
+@UI
 Feature: Sign In as customer
 
   Scenario: Sign In
