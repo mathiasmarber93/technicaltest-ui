@@ -7,7 +7,6 @@ An automation project which demonstrates how to integrate Selenium, Cucumber and
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Running Tests](#running-tests)
-- [Customization](#customization)
 - [Reporting](#reporting)
 
 ## Introduction
