@@ -77,3 +77,5 @@ In case the index HTML report has not generated. Go to Maven Window, click on Ex
 mvn serenity:aggregate
 ```
 
+You can also refer my serenity report for the technical test UI generated 09-17-2023 20:10:42 in the following link:
+https://mathiasmarber93.github.io/technicaltest-ui-report/
