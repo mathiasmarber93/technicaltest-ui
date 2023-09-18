@@ -63,6 +63,7 @@ Follow these steps to get started with this project:
 To run the tests, go to Maven Window / click on Execute Maven Goals and type:
 ```bash
 mvn clean verify
+
 ```
 ![img_8.png](img/img_8.png)
 
