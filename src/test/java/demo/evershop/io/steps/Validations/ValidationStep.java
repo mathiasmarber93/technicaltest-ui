@@ -1,6 +1,6 @@
-package demo.evershop.io.steps.Validations;
+package demo.evershop.io.steps.validations;
 
-import demo.evershop.io.pages.Validations.ValidationPage;
+import demo.evershop.io.pages.validations.ValidationPage;
 import net.serenitybdd.annotations.Step;
 import org.junit.Assert;
 

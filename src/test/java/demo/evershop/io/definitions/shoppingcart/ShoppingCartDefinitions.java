@@ -1,6 +1,6 @@
 package demo.evershop.io.definitions.shoppingcart;
 
-import demo.evershop.io.steps.Validations.ValidationStep;
+import demo.evershop.io.steps.validations.ValidationStep;
 import demo.evershop.io.steps.register.SignUpStep;
 import demo.evershop.io.steps.shoppingcart.SelectProductStep;
 import demo.evershop.io.steps.shoppingcart.ShoppingCartStep;

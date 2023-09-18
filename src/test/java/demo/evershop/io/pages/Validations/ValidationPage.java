@@ -1,4 +1,4 @@
-package demo.evershop.io.pages.Validations;
+package demo.evershop.io.pages.validations;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
