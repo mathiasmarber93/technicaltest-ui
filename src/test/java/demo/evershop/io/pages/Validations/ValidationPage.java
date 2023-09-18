@@ -20,5 +20,5 @@ public class ValidationPage extends PageObject {
 
     @FindBy(xpath = "//span[text()='Sub total']//following-sibling::div/div[1]")
     protected WebElementFacade items;
-
+/**/
 }
