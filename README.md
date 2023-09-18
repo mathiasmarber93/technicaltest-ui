@@ -40,7 +40,7 @@ Follow these steps to get started with this project:
 
 4. Install project dependencies:
 
-- Go to Maven Window / Execute Maven Goal / Execute the following command:
+- Go to Maven Window / Execute Maven Goals / Execute the following command:
    
  ```bash
    mvn clean install -DskipTests 
@@ -61,17 +61,18 @@ Follow these steps to get started with this project:
 - `pom.xml`: Maven project configuration file.
 
 ## Running Tests
-To run the tests, go to Maven Window:
+To run the tests, go to Maven Window / click on Execute Maven Goals and type:
 ```bash
 mvn clean verify
 ```
+![img_8.png](img_8.png)
 
 ## Reporting
 After running tests, you can access serenity test report located in the `target/site/serenity` directory. Open the index HTML report to view detailed test results and statistics.
 
 ![img_5.png](img_5.png)
 
-In case the index HTML report has not generated. Go to Maven Window, click on Maven Execute Goal and type
+In case the index HTML report has not generated. Go to Maven Window, click on Execute Maven Goals and type
 ```bash
 mvn serenity:aggregate
 ```
