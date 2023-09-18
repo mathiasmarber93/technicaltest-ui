@@ -26,7 +26,7 @@ Follow these steps to get started with this project:
    ```
    
 2. Or click Download ZIP
-![img.png](img.png)
+![img.png](img/img.png)
 
 3. Open Intellij IDEA and open the project
 
@@ -34,7 +34,7 @@ Follow these steps to get started with this project:
    - Navigate to the path where you have cloned or downloaded the project
    - Double click to the project
    
-   ![img_2.png](img_2.png)
+   ![img_2.png](img/img_2.png)
    
 
 4. Install project dependencies:
@@ -44,14 +44,14 @@ Follow these steps to get started with this project:
  ```bash
    mvn clean install -DskipTests 
    ```
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 5. Install Gherkin and Cucumber for Java in Marketplace
 - In Intellij IDEA, go to File / Settings / Plugins / Marketplace
 - Type Gherkin and install
 - Type Cucumber for Java and install
 
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 ## Project Structure
 - `src/test/java`: Contains test automation code.
@@ -64,12 +64,12 @@ To run the tests, go to Maven Window / click on Execute Maven Goals and type:
 ```bash
 mvn clean verify
 ```
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 ## Reporting
 After running tests, you can access serenity test report located in the `target/site/serenity` directory. Open the index HTML report to view detailed test results and statistics.
 
-![img_5.png](img_5.png)
+![img_5.png](img/img_5.png)
 
 In case the index HTML report has not generated. Go to Maven Window, click on Execute Maven Goals and type
 ```bash
